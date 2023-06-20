@@ -13,9 +13,14 @@ object Deps {
     val appCompat by lazy { "androidx.appcompat:appcompat:${Versions.appCompat}" }
     val timber by lazy { "com.jakewharton.timber:timber:${Versions.timber}" }
     val kotlin by lazy { "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}" }
-    val materialDesign by lazy { "com.google.android.material:material:${Versions.material}" }
-    val constraintLayout by lazy { "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}" }
-    val junit by lazy { "junit:junit:${Versions.jUnit}" }
+    val junit by lazy { "junit:junit:4.13.2" }
+    val androidxJunit by lazy { "androidx.test.ext:junit:1.1.5" }
+    val androidxEspressoCore by lazy { "androidx.test.espresso:espresso-core:3.5.1" }
+    val androidxTestBOM by lazy { "androidx.compose:compose-bom:2022.10.00" }
+    val androidxUiTest by lazy { "androidx.compose.ui:ui-test-junit4" }
+    val androidxUiToolingTest by lazy { "androidx.compose.ui:ui-tooling" }
+    val androidxUiTestManifest by lazy { "androidx.compose.ui:ui-test-manifest" }
+
 
     //
     val androidXCore by lazy { "androidx.core:core-ktx:1.8.0" }
@@ -27,7 +32,5 @@ object Deps {
     val composeUiGraphics by lazy { "androidx.compose.ui:ui-graphics" }
     val composeToolingPreview by lazy { "androidx.compose.ui:ui-tooling-preview" }
     val composeMaterial3 by lazy { "androidx.compose.material3:material3" }
-
-
 
 }
