@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Coding Exercise"
-include ':app'
+include (":app")

@@ -1,7 +1,4 @@
 
-
-
-
 /**
  * To define plugins
  */

@@ -1,6 +1,3 @@
-
-
-
 object Versions {
 
     const val gradlePlugin = "4.2.1"
