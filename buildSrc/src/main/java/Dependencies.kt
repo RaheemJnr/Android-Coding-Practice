@@ -21,9 +21,9 @@ object Dependencies {
 
     //
     val androidXCore by lazy { "androidx.core:core-ktx:${Versions.androidXCore}" }
-    val androidXLifecycleRuntime by lazy { "androidx.lifecycle:lifecycle-runtime-ktx:${}" }
-    val androidXActivityCompose by lazy { "androidx.activity:activity-compose:1.5.1" }
-    val composeBOM by lazy { "androidx.compose:compose-bom:2022.10.00" }
+    val androidXLifecycleRuntime by lazy { "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.androidXLifecycleRuntime}" }
+    val androidXActivityCompose by lazy { "androidx.activity:activity-compose:${Versions.androidXActivityCompose}" }
+    val composeBOM by lazy { "androidx.compose:compose-bom:${Versions.composeBOM}" }
     val composeUi by lazy { "androidx.compose.ui:ui" }
     val composeUiGraphics by lazy { "androidx.compose.ui:ui-graphics" }
     val composeToolingPreview by lazy { "androidx.compose.ui:ui-tooling-preview" }
