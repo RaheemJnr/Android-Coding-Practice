@@ -1,19 +1,18 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-//    kotlin("android")
 }
 
 android {
     namespace = "com.example.codingexercise"
-    compileSdk = 33
+    compileSdk = ConfigData.compileSdkVersion
 
     defaultConfig {
         applicationId = "com.example.codingexercise"
-        minSdk = 25
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = ConfigData.minSdkVersion
+        targetSdk = ConfigData.targetSdkVersion
+        versionCode = ConfigData.versionCode
+        versionName = ConfigData.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -43,10 +42,6 @@ android {
     }
 
 
-//    kotlinOptions {
-//        jvmTarget = '1.8'
-//    }
-
     buildFeatures {
         compose = true
     }
@@ -62,21 +57,21 @@ android {
 
 dependencies {
 
-    implementation(Deps.androidXCore)
-    implementation(Deps.androidXLifecycleRuntime)
-    implementation(Deps.androidXActivityCompose)
-    implementation(platform(Deps.composeBOM))
-    implementation(Deps.composeUi)
-    implementation(Deps.composeUiGraphics)
-    implementation(Deps.composeToolingPreview)
-    implementation(Deps.composeMaterial3)
+    implementation(Dependencies.androidXCore)
+    implementation(Dependencies.androidXLifecycleRuntime)
+    implementation(Dependencies.androidXActivityCompose)
+    implementation(platform(Dependencies.composeBOM))
+    implementation(Dependencies.composeUi)
+    implementation(Dependencies.composeUiGraphics)
+    implementation(Dependencies.composeToolingPreview)
+    implementation(Dependencies.composeMaterial3)
 
 
-    testImplementation(Deps.junit)
-    androidTestImplementation(Deps.androidxJunit)
-    androidTestImplementation(Deps.androidxEspressoCore)
-    androidTestImplementation (platform (Deps.androidxTestBOM))
-    androidTestImplementation(Deps.androidxUiTest)
-    debugImplementation(Deps.androidxUiToolingTest)
-    debugImplementation(Deps.androidxUiTestManifest)
+    testImplementation(Dependencies.junit)
+    androidTestImplementation(Dependencies.androidxJunit)
+    androidTestImplementation(Dependencies.androidxEspressoCore)
+    androidTestImplementation (platform (Dependencies.androidxTestBOM))
+    androidTestImplementation(Dependencies.androidxUiTest)
+    debugImplementation(Dependencies.androidxUiToolingTest)
+    debugImplementation(Dependencies.androidxUiTestManifest)
 }
