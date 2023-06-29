@@ -14,3 +14,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Coding Exercise"
 include (":app")
+include(":module_1")
