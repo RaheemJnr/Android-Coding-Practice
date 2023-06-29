@@ -74,4 +74,6 @@ dependencies {
     androidTestImplementation(Dependencies.androidxUiTest)
     debugImplementation(Dependencies.androidxUiToolingTest)
     debugImplementation(Dependencies.androidxUiTestManifest)
+
+    implementation(project(":module_1"))
 }
