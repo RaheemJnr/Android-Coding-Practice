@@ -76,4 +76,5 @@ dependencies {
     debugImplementation(Dependencies.androidxUiTestManifest)
 
     implementation(project(":module_1"))
+    implementation(project(":networking"))
 }
