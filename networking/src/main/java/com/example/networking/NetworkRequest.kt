@@ -24,7 +24,7 @@ object ApiCall {
         .build()
 
     // service use to send network request
-    val RETROFIT_SERVICE: ApiService by lazy {
-        retrofit.create(ApiService::class.java)
-    }
+//    val RETROFIT_SERVICE: ApiService by lazy {
+//        retrofit.create(ApiService::class.java)
+//    }
 }
