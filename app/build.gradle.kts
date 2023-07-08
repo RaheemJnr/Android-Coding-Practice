@@ -1,8 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    // serialization
-    //id ("org.jetbrains.kotlin.plugin.serialization") version "1.8.10"
 }
 
 android {
@@ -79,4 +77,13 @@ dependencies {
 
     implementation(project(":module_1"))
     implementation(project(":networking"))
+
+    constraints {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.21") {
+            because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
+        }
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.21") {
+            because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
+        }
+    }
 }
