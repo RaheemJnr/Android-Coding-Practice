@@ -1,30 +1,35 @@
 package com.example.networking
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
+import kotlinx.serialization.json.Json
+import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
 
+//private val retrofit = Retrofit.Builder()
+//    .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
+//    .baseUrl(BASE_URL)
+//    .build()
 
 const val BASE_URL = ""
-private val moshi = Moshi.Builder()
-    .add(KotlinJsonAdapterFactory())
-    .build()
 
+
+val contentType = "application/json".toMediaType()
+private val jsonConfig = Json.configuration
+private val json = Json
 /**
  * Main entry point for network access.
  */
 object ApiCall {
     // Configure retrofit to parse JSON and use coroutines
     private val retrofit = Retrofit.Builder()
+        .addConverterFactory(json.asConverterFactory(contentType))
         .baseUrl(BASE_URL)
-        .addConverterFactory(MoshiConverterFactory.create(moshi))
         .addCallAdapterFactory(CoroutineCallAdapterFactory())
         .build()
 
     // service use to send network request
-    val RETROFIT_SERVICE: ApiService by lazy {
-        retrofit.create(ApiService::class.java)
-    }
+//    val RETROFIT_SERVICE: ApiService by lazy {
+//        retrofit.create(ApiService::class.java)
+//    }
 }
